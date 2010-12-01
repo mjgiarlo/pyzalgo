@@ -1,0 +1,7 @@
+#!/usr/bin/env python
+
+import zalgo
+
+if __name__ == '__main__':
+    import sys
+    print zalgo.zalgo(u' '.join(sys.argv[1:]))
