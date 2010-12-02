@@ -2,3 +2,13 @@ h1. pyzalgo
 
 Turn your text into ZALGO text!
 
+h2. Usage
+
+<pre>
+  $ zalgo --intensity=50 This is some text to zalgoize
+  ...
+  $ zalgo `cat some_file`
+  ...
+  $ cat some_file | zalgo --intensity=5
+  ...
+</pre>

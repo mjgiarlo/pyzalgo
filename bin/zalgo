@@ -4,8 +4,25 @@ import zalgo
 
 if __name__ == '__main__':
     import sys
-    if len(sys.argv) > 1:
-        text = u' '.join(sys.argv[1:])
+    import argparse
+    parser = argparse.ArgumentParser(
+        description="Turn your text into ZALGO text!")
+    parser.add_argument('text',
+                        nargs="*",
+                        help="text to be zalgoized",
+                        default=sys.stdin)
+    parser.add_argument('--intensity',
+                        type=int,
+                        choices=xrange(1, 201),
+                        help='how zalgoized?',
+                        default='50')    
+    args = parser.parse_args()
+    if type(args.text) == file:
+        if args.text.isatty():
+            text = "ZALGO"
+        else:
+            text = args.text.read().strip()
     else:
-        text = sys.stdin.read()
-    print zalgo.zalgo(text)
+        text = u' '.join(args.text)
+
+    print zalgo.zalgo(text, args.intensity)
