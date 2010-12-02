@@ -4,4 +4,8 @@ import zalgo
 
 if __name__ == '__main__':
     import sys
-    print zalgo.zalgo(u' '.join(sys.argv[1:]))
+    if len(sys.argv) > 1:
+        text = u' '.join(sys.argv[1:])
+    else:
+        text = sys.stdin.read()
+    print zalgo.zalgo(text)
