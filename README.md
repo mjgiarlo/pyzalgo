@@ -12,5 +12,3 @@ Turn your text into ZALGO text!
   $ cat some_file | zalgo --intensity=5
   ...
 ```
-
-This is a [stupid markdown test](pyzalgo/tree/master).
