@@ -1,14 +1,16 @@
-h1. pyzalgo
+# pyzalgo
 
 Turn your text into ZALGO text!
 
-h2. Usage
+# Usage
 
-<pre>
+```shell
   $ zalgo --intensity=50 This is some text to zalgoize
   ...
   $ zalgo `cat some_file`
   ...
   $ cat some_file | zalgo --intensity=5
   ...
-</pre>
+```
+
+This is a [stupid markdown test](pyzalgo/tree/master).
